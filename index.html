@@ -1032,7 +1032,8 @@
             <div>
               <h2>🧠 Thời khóa biểu tuần thông minh</h2>
               <p class="hint">
-                Tự lấy <strong>kế hoạch trong tuần</strong> và phân phối đều vào 7 ngày, kèm gợi ý khung giờ.
+                Tự gom <strong>các kế hoạch trong ngày</strong> của <strong>tuần hiện tại</strong>
+                (có ngày cụ thể) thành thời khóa biểu 7 ngày.
               </p>
             </div>
             <div class="schedule-actions">
@@ -1978,57 +1979,96 @@
     });
 
     // ===== Thời khóa biểu tuần =====
+
+    // Lấy thứ 2 (Monday) của tuần chứa một ngày bất kỳ
+    function getMondayOfWeek(date) {
+      const d = new Date(date);
+      const day = (d.getDay() + 6) % 7; // đổi chủ nhật = 6
+      d.setDate(d.getDate() - day);
+      d.setHours(0, 0, 0, 0);
+      return d;
+    }
+
+    // Đổi Date -> chuỗi yyyy-mm-dd
+    function dateToISO(d) {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return `${y}-${m}-${day}`;
+    }
+
     generateScheduleBtn.addEventListener("click", generateSmartWeekSchedule);
 
+    // 👉 GIỜ DÙNG CÁC KẾ HOẠCH "TRONG NGÀY" CỦA TUẦN HIỆN TẠI
     function generateSmartWeekSchedule() {
-      const weeklyTasks = tasks.filter(t => t.level === "week");
+      // Lọc kế hoạch trong ngày có ngày cụ thể
+      const dailyTasks = tasks.filter(t => t.level === "day" && t.date);
 
-      if (weeklyTasks.length === 0) {
+      if (dailyTasks.length === 0) {
         scheduleTableEl.innerHTML =
-          '<tr><td style="padding:10px; font-size:13px; color:#6b7280;">Chưa có "kế hoạch trong tuần" nào để phân phối.</td></tr>';
+          '<tr><td style="padding:10px; font-size:13px; color:#6b7280;">Chưa có "kế hoạch trong ngày" nào có ngày cụ thể để tạo thời khóa biểu tuần.</td></tr>';
         tipsBoxEl.style.display = "none";
         return;
       }
 
-      const days = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ nhật"];
-      const schedule = days.map(() => []);
+      // Tuần hiện tại (theo ngày hôm nay)
+      const today = new Date();
+      const monday = getMondayOfWeek(today);
+      const daysLabel = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ nhật"];
 
-      weeklyTasks.forEach(task => {
-        let minIndex = 0;
-        for (let i = 1; i < schedule.length; i++) {
-          if (schedule[i].length < schedule[minIndex].length) {
-            minIndex = i;
-          }
-        }
-        schedule[minIndex].push(task);
-      });
+      const schedule = [];
+      const headerLabels = [];
 
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(monday);
+        d.setDate(monday.getDate() + i);
+        const iso = dateToISO(d);
+        const dd = String(d.getDate()).padStart(2, "0");
+        const mm = String(d.getMonth() + 1).padStart(2, "0");
+
+        headerLabels.push(`${daysLabel[i]} (${dd}/${mm})`);
+
+        const tasksOfDay = dailyTasks
+          .filter(t => t.date === iso)
+          .sort((a, b) => {
+            const ta = a.time || "23:59";
+            const tb = b.time || "23:59";
+            return ta.localeCompare(tb);
+          });
+
+        schedule.push(tasksOfDay);
+      }
+
+      // Nếu cả tuần đều trống thì báo
+      const totalInWeek = schedule.reduce((sum, arr) => sum + arr.length, 0);
+      if (totalInWeek === 0) {
+        scheduleTableEl.innerHTML =
+          '<tr><td style="padding:10px; font-size:13px; color:#6b7280;">Tuần hiện tại không có kế hoạch trong ngày nào. Hãy kiểm tra lại ngày của các kế hoạch.</td></tr>';
+        tipsBoxEl.style.display = "none";
+        return;
+      }
+
+      // Render bảng
       let html = "<thead><tr><th>Ngày</th>";
-      days.forEach(day => {
-        html += `<th>${day}</th>`;
+      headerLabels.forEach(label => {
+        html += `<th>${label}</th>`;
       });
       html += "</tr></thead><tbody>";
 
-      html += "<tr><th>Công việc</th>";
+      html += "<tr><th>Kế hoạch</th>";
       schedule.forEach(dayTasks => {
         html += "<td>";
         if (dayTasks.length === 0) {
           html += '<span style="font-size:11px; color:#6b7280;">(Trống)</span>';
         } else {
           dayTasks.forEach(task => {
-            const blockShort =
-              task.priority === "high"
-                ? "Sáng"
-                : task.priority === "low"
-                ? "Tối"
-                : "Chiều";
-
+            const timeRange = formatTimeRange(task) || "Chưa có giờ";
             html += `
               <div class="schedule-task">
                 <span class="schedule-task-title">${task.title}</span>
                 ${task.note ? `<span class="schedule-task-note">${task.note}</span>` : ""}
                 <span class="schedule-task-extra">
-                  Ưu tiên: ${humanPriorityText(task.priority)} · Gợi ý khung giờ: ${blockShort}
+                  Giờ: ${timeRange} · Ưu tiên: ${humanPriorityText(task.priority)}
                 </span>
               </div>
             `;
@@ -2039,7 +2079,7 @@
       html += "</tr></tbody>";
 
       scheduleTableEl.innerHTML = html;
-      generateTimeManagementTips(schedule, days);
+      generateTimeManagementTips(schedule, headerLabels);
     }
 
     function generateTimeManagementTips(schedule, days) {
@@ -2050,7 +2090,7 @@
 
       const overloadedDays = [];
       counts.forEach((count, index) => {
-        if (count === maxTasks && count > 2) {
+        if (count === maxTasks && count > 3) {
           overloadedDays.push(days[index]);
         }
       });
