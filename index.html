@@ -16,6 +16,60 @@
       color: #e5e7eb;
     }
 
+    /* ===== THEME CTUMP (nền sáng dịu) ===== */
+    body.theme-ctump {
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    body.theme-ctump .card {
+      background: #ffffff;
+      border-color: #e5e7eb;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    body.theme-ctump input[type="text"],
+    body.theme-ctump textarea,
+    body.theme-ctump select,
+    body.theme-ctump input[type="date"],
+    body.theme-ctump input[type="time"] {
+      background: #f9fafb;
+      border-color: #d1d5db;
+      color: #111827;
+    }
+
+    body.theme-ctump input:focus,
+    body.theme-ctump textarea:focus,
+    body.theme-ctump select:focus {
+      background: #ffffff;
+    }
+
+    body.theme-ctump .schedule-grid th {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    body.theme-ctump .schedule-task {
+      background: #f9fafb;
+      border-color: #d1d5db;
+    }
+
+    body.theme-ctump .hero-overlay {
+      background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.25),
+          rgba(239, 68, 68, 0.18)
+        );
+    }
+
+    body.theme-ctump .hero-title {
+      color: #111827;
+    }
+
+    body.theme-ctump .hero-subtitle {
+      color: #374151;
+    }
+
     .page {
       padding: 20px;
     }
@@ -128,6 +182,12 @@
       box-shadow: 0 8px 16px rgba(15, 23, 42, 0.6);
     }
 
+    body.theme-ctump .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+    }
+
     .btn-small {
       padding: 6px 10px;
       font-size: 12px;
@@ -212,7 +272,7 @@
     .task-title {
       font-size: 14px;
       font-weight: 600;
-      color: #e5e7eb;
+      color: inherit;
     }
 
     .task-meta {
@@ -221,10 +281,18 @@
       margin-top: 2px;
     }
 
+    body.theme-ctump .task-meta {
+      color: #6b7280;
+    }
+
     .task-note {
       font-size: 12px;
       color: #cbd5f5;
       margin-top: 2px;
+    }
+
+    body.theme-ctump .task-note {
+      color: #4b5563;
     }
 
     .task-suggestion {
@@ -255,6 +323,11 @@
       color: #e5e7eb;
     }
 
+    body.theme-ctump .small-btn:hover {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
     .completed .task-title {
       text-decoration: line-through;
       color: #6b7280;
@@ -279,6 +352,10 @@
       font-size: 12px;
       color: #9ca3af;
       margin-top: 4px;
+    }
+
+    body.theme-ctump .hint {
+      color: #6b7280;
     }
 
     /* Schedule / Timetable */
@@ -319,6 +396,11 @@
       z-index: 1;
     }
 
+    body.theme-ctump .schedule-grid th {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
     .schedule-task {
       background: #0b1120;
       border-radius: 10px;
@@ -338,9 +420,17 @@
       color: #bfdbfe;
     }
 
+    body.theme-ctump .schedule-task-title {
+      color: #1d4ed8;
+    }
+
     .schedule-task-note {
       font-size: 11px;
       color: #e5e7eb;
+    }
+
+    body.theme-ctump .schedule-task-note {
+      color: #374151;
     }
 
     .schedule-task-extra {
@@ -357,6 +447,12 @@
       border-left: 3px solid #0ea5e9;
       font-size: 12px;
       color: #e5e7eb;
+    }
+
+    body.theme-ctump .tips {
+      background: #e5f3ff;
+      color: #1f2937;
+      border-left-color: #0ea5e9;
     }
 
     .tips ul {
@@ -436,6 +532,12 @@
       backdrop-filter: blur(6px);
     }
 
+    body.theme-ctump .hero-pill {
+      background: rgba(255,255,255,0.7);
+      border-color: rgba(148,163,184,0.7);
+      color: #111827;
+    }
+
     .hero-footer {
       display: flex;
       justify-content: space-between;
@@ -444,6 +546,10 @@
       color: #cbd5f5;
       gap: 10px;
       flex-wrap: wrap;
+    }
+
+    body.theme-ctump .hero-footer {
+      color: #4b5563;
     }
 
     /* Đề mục thường dùng */
@@ -467,8 +573,18 @@
       gap: 6px;
     }
 
+    body.theme-ctump .chip {
+      background: #f9fafb;
+      border-color: #d1d5db;
+      color: #111827;
+    }
+
     .chip:hover {
       background: #111827;
+    }
+
+    body.theme-ctump .chip:hover {
+      background: #e5e7eb;
     }
 
     .chip-remove {
@@ -507,8 +623,18 @@
       font-size: 16px;
     }
 
+    body.theme-ctump .calendar-nav-btn {
+      background: #ffffff;
+      color: #111827;
+      border-color: #d1d5db;
+    }
+
     .calendar-nav-btn:hover {
       background: #111827;
+    }
+
+    body.theme-ctump .calendar-nav-btn:hover {
+      background: #e5e7eb;
     }
 
     .calendar-month-label {
@@ -529,6 +655,10 @@
       color: #9ca3af;
     }
 
+    body.theme-ctump .calendar-weekdays div {
+      color: #6b7280;
+    }
+
     .calendar-day {
       padding: 6px 0;
       margin: 2px;
@@ -543,6 +673,11 @@
       color: #bfdbfe;
     }
 
+    body.theme-ctump .calendar-day--today {
+      background: #e0f2fe;
+      color: #1d4ed8;
+    }
+
     .calendar-day--other-month {
       opacity: 0.4;
     }
@@ -550,6 +685,11 @@
     .calendar-day--selected {
       border: 1px solid #f97316;
       background: #111827;
+    }
+
+    body.theme-ctump .calendar-day--selected {
+      background: #ffedd5;
+      border-color: #f97316;
     }
 
     /* Khung kế hoạch của ngày đã chọn */
@@ -562,6 +702,11 @@
       font-size: 12px;
     }
 
+    body.theme-ctump .selected-day-box {
+      background: #ffffff;
+      border-color: #e5e7eb;
+    }
+
     .selected-day-title {
       font-weight: 600;
       margin-bottom: 4px;
@@ -571,9 +716,17 @@
       color: #bfdbfe;
     }
 
+    body.theme-ctump .selected-day-title span {
+      color: #1d4ed8;
+    }
+
     .selected-day-task {
       padding: 4px 0;
       border-bottom: 1px dashed #1f2937;
+    }
+
+    body.theme-ctump .selected-day-task {
+      border-color: #e5e7eb;
     }
 
     .selected-day-task:last-child {
@@ -590,9 +743,17 @@
       color: #cbd5f5;
     }
 
+    body.theme-ctump .selected-day-task-note {
+      color: #4b5563;
+    }
+
     .selected-day-task-meta {
       font-size: 11px;
       color: #9ca3af;
+    }
+
+    body.theme-ctump .selected-day-task-meta {
+      color: #6b7280;
     }
 
     .selected-filter-row {
@@ -618,6 +779,10 @@
       font-size: 12px;
     }
 
+    body.theme-ctump .lesson-item {
+      border-color: #e5e7eb;
+    }
+
     .lesson-item:last-child {
       border-bottom: none;
     }
@@ -632,10 +797,18 @@
       margin-top: 2px;
     }
 
+    body.theme-ctump .lesson-meta {
+      color: #6b7280;
+    }
+
     .lesson-links {
       margin-top: 2px;
       color: #bfdbfe;
       word-break: break-all;
+    }
+
+    body.theme-ctump .lesson-links {
+      color: #1d4ed8;
     }
 
     .lesson-files {
@@ -654,6 +827,11 @@
       color: #bfdbfe;
     }
 
+    body.theme-ctump .lesson-file-link {
+      color: #1d4ed8;
+      border-color: #1d4ed8;
+    }
+
     .lesson-thumb {
       max-width: 80px;
       max-height: 60px;
@@ -663,171 +841,31 @@
       border: 1px solid #1f2937;
     }
 
+    body.theme-ctump .lesson-thumb {
+      border-color: #e5e7eb;
+    }
+
     /* Watermark bản quyền */
     .watermark {
       position: fixed;
-      right: 8px;
-      bottom: 8px;
+      right: 10px;
+      bottom: 10px;
       font-size: 12px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       color: #4b5563;
-      opacity: 0.75;
+      opacity: 0.8;
       pointer-events: none;
       user-select: none;
-    }
-
-    /* ==================== THEME CTUMP (SÁNG) ==================== */
-
-    body.theme-ctump {
-      background: #f3f4f6;
-      color: #111827;
-    }
-
-    body.theme-ctump .card {
-      background: #ffffff;
-      border-color: #e5e7eb;
-      box-shadow: 0 8px 20px rgba(148,163,184,0.35);
-    }
-
-    body.theme-ctump .hint {
-      color: #6b7280;
-    }
-
-    body.theme-ctump input[type="text"],
-    body.theme-ctump textarea,
-    body.theme-ctump select,
-    body.theme-ctump input[type="date"],
-    body.theme-ctump input[type="time"] {
-      background: #f9fafb;
-      color: #111827;
-      border-color: #d1d5db;
-    }
-
-    body.theme-ctump input:focus,
-    body.theme-ctump textarea:focus,
-    body.theme-ctump select:focus {
-      background: #ffffff;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 1px #2563eb;
-    }
-
-    body.theme-ctump .task-title,
-    body.theme-ctump .lesson-title,
-    body.theme-ctump .selected-day-title {
-      color: #111827;
-    }
-
-    body.theme-ctump .task-meta,
-    body.theme-ctump .lesson-meta,
-    body.theme-ctump .selected-day-task-meta {
-      color: #6b7280;
-    }
-
-    body.theme-ctump .task-note,
-    body.theme-ctump .lesson-links,
-    body.theme-ctump .selected-day-task-note {
-      color: #374151;
-    }
-
-    body.theme-ctump .chip {
-      background: #f9fafb;
-      border-color: #d1d5db;
-      color: #111827;
-    }
-
-    body.theme-ctump .chip:hover {
-      background: #e5e7eb;
-    }
-
-    body.theme-ctump .hero-overlay {
-      background: radial-gradient(circle at 20% 20%, rgba(59,130,246,0.20), transparent 55%),
-                  radial-gradient(circle at 80% 80%, rgba(248,113,113,0.18), transparent 55%),
-                  rgba(255,255,255,0.70);
-    }
-
-    body.theme-ctump .hero-content {
-      color: #111827;
-    }
-
-    body.theme-ctump .hero-title {
-      color: #111827;
-    }
-
-    body.theme-ctump .hero-subtitle {
-      color: #4b5563;
-    }
-
-    body.theme-ctump .hero-pill {
-      background: rgba(255,255,255,0.9);
-      border-color: #e5e7eb;
-      color: #1f2937;
-    }
-
-    body.theme-ctump .hero-footer {
-      color: #4b5563;
-    }
-
-    body.theme-ctump .schedule-grid th {
-      background: #f9fafb;
-    }
-
-    body.theme-ctump .schedule-grid td {
-      border-color: #e5e7eb;
-    }
-
-    body.theme-ctump .schedule-task {
-      background: #f9fafb;
-      border-color: #d1d5db;
-    }
-
-    body.theme-ctump .tips {
-      background: #f9fafb;
-      border-left-color: #0ea5e9;
-      color: #111827;
-    }
-
-    body.theme-ctump .calendar-nav-btn {
-      background: #f9fafb;
-      color: #111827;
-      border-color: #d1d5db;
-    }
-
-    body.theme-ctump .calendar-nav-btn:hover {
-      background: #e5e7eb;
-    }
-
-    body.theme-ctump .calendar-day--today {
-      border-color: #2563eb;
-      background: #eff6ff;
-      color: #1d4ed8;
-    }
-
-    body.theme-ctump .calendar-day--selected {
-      border-color: #f97316;
-      background: #fffbeb;
-    }
-
-    body.theme-ctump .selected-day-box {
-      background: #f9fafb;
-      border-color: #e5e7eb;
-    }
-
-    body.theme-ctump .lesson-item {
-      border-bottom-color: #e5e7eb;
-    }
-
-    body.theme-ctump .task-item {
-      border-bottom-color: #e5e7eb;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
   <!-- WATERMARK -->
-  <div class="watermark">ZSLOWC - TRAN CHI  CUONG</div>
+  <div class="watermark">ZSLOWC - TRAN CHI CUONG</div>
 
   <!-- HERO với ảnh không gian / CTUMP -->
   <div class="hero">
-    <!-- Ảnh mặc định: space-bg.jpg -->
     <img src="space-bg.jpg" alt="Background" class="hero-bg" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -845,7 +883,6 @@
       <div class="hero-footer">
         <span>📅 Thời khóa biểu tuần · ⏱️ Tối ưu thời gian</span>
         <span>✨ Ảnh nền: hành tinh không gian / CTUMP</span>
-        <!-- Nút chuyển giao diện -->
         <button class="btn btn-small btn-secondary" id="toggle-theme-btn">
           Giao diện: Space
         </button>
@@ -911,14 +948,14 @@
             • Với <strong>kế hoạch trong ngày</strong> nên chọn cả ngày và giờ bắt đầu / kết thúc cụ thể.<br />
             • Với <strong>kế hoạch trong tuần / tháng / năm</strong> có thể bỏ trống ngày,
             coi như việc cần làm trong giai đoạn đó.<br />
-            • Ưu tiên <strong>Cao</strong> → gợi ý buổi sáng, <strong>Trung bình</strong> → buổi chiều,
+            • Ưu tiên <strong>Cao</strong> → buổi sáng, <strong>Trung bình</strong> → buổi chiều,
             <strong>Thấp</strong> → buổi tối.
           </div>
 
           <button class="btn" id="add-task-btn">Thêm kế hoạch</button>
         </div>
 
-        <!-- Đề mục thường dùng (môn học...) -->
+        <!-- Đề mục thường dùng -->
         <div class="card">
           <h2>📚 Đề mục thường dùng (môn học / hoạt động)</h2>
           <label for="frequent-input">Thêm đề mục mới</label>
@@ -927,8 +964,8 @@
             <button class="btn btn-secondary" id="add-frequent-btn">Thêm vào danh sách</button>
           </div>
           <div class="hint">
-            👉 Bấm vào một <strong>chip</strong> bên dưới để tự động chèn vào ô <strong>Tiêu đề kế hoạch</strong>.<br/>
-            Bấm dấu <strong>x</strong> để xóa khỏi danh sách. Danh sách này được lưu lại cho những lần sau.
+            👉 Bấm một <strong>chip</strong> bên dưới để chèn vào <strong>Tiêu đề kế hoạch</strong>.<br/>
+            Bấm dấu <strong>x</strong> để xóa. Danh sách được lưu lại (local + cloud).
           </div>
           <div id="frequent-list" class="chip-list"></div>
         </div>
@@ -937,17 +974,17 @@
         <div class="card">
           <h2>📖 Thư viện môn học & bài học</h2>
           <div class="hint">
-            Danh sách môn học bên dưới lấy từ <strong>Đề mục thường dùng</strong>.  
-            Mỗi môn có thể thêm nhiều bài học, chương, link và đính kèm file/ảnh. Dữ liệu tự lưu vào trình duyệt.
+            Danh sách môn học lấy từ <strong>Đề mục thường dùng</strong>.  
+            Mỗi môn có thể thêm nhiều bài học, chương, link và đính kèm file/ảnh.
           </div>
 
           <label for="subject-select">Chọn môn học</label>
           <select id="subject-select"></select>
 
           <label for="lesson-search" style="margin-top:8px;">Tìm kiếm bài học</label>
-          <input id="lesson-search" type="text" placeholder="Nhập tên bài, chương hoặc từ khóa trong link/ghi chú..." />
+          <input id="lesson-search" type="text" placeholder="Nhập tên bài, chương hoặc từ khóa..." />
           <div class="hint">
-            Gõ từ khóa, danh sách bài học bên dưới sẽ được lọc theo <strong>tên bài</strong>, <strong>chương</strong> và <strong>link / ghi chú</strong>.
+            Lọc theo <strong>tên bài</strong>, <strong>chương</strong>, <strong>link/ghi chú</strong>.
           </div>
 
           <div class="field-row" style="margin-top:8px;">
@@ -962,7 +999,7 @@
           </div>
 
           <label for="lesson-link" style="margin-top:8px;">Link tài liệu / ghi chú thêm</label>
-          <textarea id="lesson-link" placeholder="Dán link Drive, link PDF, video, hoặc ghi chú ngắn..."></textarea>
+          <textarea id="lesson-link" placeholder="Dán link Drive, video, PDF, hoặc ghi chú ngắn..."></textarea>
 
           <label for="lesson-file" style="margin-top:8px;">Đính kèm ảnh / file (tùy chọn)</label>
           <input id="lesson-file" type="file" multiple />
@@ -970,8 +1007,8 @@
           <button class="btn btn-secondary" id="add-lesson-btn">Thêm bài học cho môn này</button>
 
           <div class="hint">
-            • File nhỏ / vài ảnh minh họa sẽ ổn.  
-            • Nên lưu tài liệu nặng ở Drive rồi dán link vào ô phía trên để đỡ đầy bộ nhớ.
+            • File nặng nên lưu trên Drive rồi dán link ở ô trên.  
+            • Dữ liệu bài học cũng được lưu LocalStorage + Firebase.
           </div>
 
           <div id="lesson-list" style="margin-top:10px; max-height:220px; overflow:auto;"></div>
@@ -982,8 +1019,8 @@
           <div class="task-list" id="task-list"></div>
           <div class="hint">
             ✅ Check vào kế hoạch trong ngày để đánh dấu hoàn thành.<br />
-            🧊 Dữ liệu được lưu tự động trong trình duyệt (LocalStorage).<br />
-            🗑️ Có thể xoá nhanh từng kế hoạch nếu không còn phù hợp.
+            🧊 Dữ liệu lưu tự động: LocalStorage + Firebase.<br />
+            🗑️ Có thể xoá từng kế hoạch nếu không còn phù hợp.
           </div>
         </div>
       </div>
@@ -995,8 +1032,7 @@
             <div>
               <h2>🧠 Thời khóa biểu tuần thông minh</h2>
               <p class="hint">
-                App sẽ tự lấy các <strong>kế hoạch trong tuần</strong> và phân phối đều vào 7 ngày,
-                kèm gợi ý khung giờ (sáng/chiều/tối) theo mức ưu tiên.
+                Tự lấy <strong>kế hoạch trong tuần</strong> và phân phối đều vào 7 ngày, kèm gợi ý khung giờ.
               </p>
             </div>
             <div class="schedule-actions">
@@ -1032,7 +1068,7 @@
         <div class="card">
           <h2>📅 Lịch tháng (xem & chọn ngày)</h2>
           <p class="hint">
-            Bấm vào một ngày trên lịch (kể cả phần xám) để xem nhanh các kế hoạch đã đặt cho ngày đó.
+            Bấm vào một ngày trên lịch để xem nhanh các kế hoạch đã đặt cho ngày đó (có thể lọc theo loại & mức ưu tiên).
           </p>
           <div class="calendar">
             <div class="calendar-header">
@@ -1062,9 +1098,9 @@
               <select id="filter-level">
                 <option value="all">Tất cả loại kế hoạch</option>
                 <option value="day">Chỉ kế hoạch trong ngày</option>
-                <option value="week">Kế hoạch trong tuần</option>
-                <option value="month">Kế hoạch trong tháng</option>
-                <option value="year">Kế hoạch trong năm</option>
+                <option value="week">Trong tuần</option>
+                <option value="month">Trong tháng</option>
+                <option value="year">Trong năm</option>
               </select>
               <select id="filter-priority">
                 <option value="all">Tất cả mức ưu tiên</option>
@@ -1081,7 +1117,32 @@
     </div>
   </div>
 
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
   <script>
+    // ===== Firebase init =====
+    const firebaseConfig = {
+      apiKey: "AIzaSyDyAcU3c0aIa4VhGxNFeaWZUX3EcRfus9U",
+      authDomain: "zslowccuong.firebaseapp.com",
+      databaseURL: "https://zslowccuong-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "zslowccuong",
+      storageBucket: "zslowccuong.firebasestorage.app",
+      messagingSenderId: "581340060031",
+      appId: "1:581340060031:web:4c78ab55e9aabbd07da24a",
+      measurementId: "G-XD658JHWN5"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    const USER_ID = "default_user";
+
+    const tasksRef    = db.ref("planner/" + USER_ID + "/tasks");
+    const frequentRef = db.ref("planner/" + USER_ID + "/frequent");
+    const subjectsRef = db.ref("planner/" + USER_ID + "/subjects");
+
+    // ===== ỨNG DỤNG CHÍNH =====
     const tasks = [];
     const frequentItems = [];
 
@@ -1089,7 +1150,6 @@
     const STORAGE_FREQUENT_KEY = "smart_planner_frequent_v1";
     const STORAGE_SUBJECTS_KEY = "smart_planner_subjects_v1";
 
-    // subjectStore: { [subjectName]: { lessons: [ {id,title,chapter,link,attachments:[{id,name,type,dataUrl}]} ] } }
     let subjectStore = {};
 
     const taskTitleEl = document.getElementById("task-title");
@@ -1115,7 +1175,6 @@
     const addFrequentBtn = document.getElementById("add-frequent-btn");
     const frequentListEl = document.getElementById("frequent-list");
 
-    // Thư viện môn học
     const subjectSelectEl = document.getElementById("subject-select");
     const lessonSearchEl = document.getElementById("lesson-search");
     const lessonTitleEl = document.getElementById("lesson-title");
@@ -1125,7 +1184,6 @@
     const addLessonBtn = document.getElementById("add-lesson-btn");
     const lessonListEl = document.getElementById("lesson-list");
 
-    // Calendar elements
     const calPrevBtn = document.getElementById("cal-prev");
     const calNextBtn = document.getElementById("cal-next");
     const calendarMonthLabelEl = document.getElementById("calendar-month-label");
@@ -1136,7 +1194,6 @@
     const filterLevelEl = document.getElementById("filter-level");
     const filterPriorityEl = document.getElementById("filter-priority");
 
-    // ====== Theme (Space / CTUMP) ======
     const THEME_KEY = "smart_planner_theme_v1";
     let currentTheme = "space";
     const heroBgEl = document.querySelector(".hero-bg");
@@ -1144,26 +1201,91 @@
     const heroPillEl = document.querySelector(".hero-pill");
     const toggleThemeBtn = document.getElementById("toggle-theme-btn");
 
-    let selectedDateStr = ""; // yyyy-mm-dd
-    let currentMonth; // 0–11
-    let currentYear;  // yyyy
+    let selectedDateStr = "";
+    let currentMonth;
+    let currentYear;
 
-    // ====== LocalStorage ======
+    // ===== Local + Firebase save =====
     function saveTasks() {
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
       } catch (e) {
         console.error("Không thể lưu LocalStorage:", e);
       }
+      try {
+        tasksRef.set(tasks);
+      } catch (e) {
+        console.error("Không thể lưu Firebase tasks:", e);
+      }
     }
 
+    function saveFrequent() {
+      try {
+        const names = frequentItems.map(item => item.name);
+        localStorage.setItem(STORAGE_FREQUENT_KEY, JSON.stringify(names));
+      } catch (e) {
+        console.error("Không thể lưu đề mục thường dùng:", e);
+      }
+
+      try {
+        const names = frequentItems.map(item => item.name);
+        frequentRef.set(names);
+      } catch (e) {
+        console.error("Không thể lưu Firebase frequent:", e);
+      }
+    }
+
+    function saveSubjects() {
+      try {
+        localStorage.setItem(STORAGE_SUBJECTS_KEY, JSON.stringify(subjectStore));
+      } catch (e) {
+        console.error("Không thể lưu thư viện môn học:", e);
+      }
+
+      try {
+        subjectsRef.set(subjectStore);
+      } catch (e) {
+        console.error("Không thể lưu Firebase subjects:", e);
+      }
+    }
+
+    // ===== Load (local trước, rồi Firebase ghi đè) =====
     function loadTasks() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return;
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) {
-          parsed.forEach(t => {
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            parsed.forEach(t => {
+              tasks.push({
+                id: t.id || Date.now() + Math.random(),
+                title: t.title || "",
+                note: t.note || "",
+                level: t.level || "day",
+                date: t.date || "",
+                time: t.time || "",
+                endTime: t.endTime || "",
+                completed: !!t.completed,
+                priority: t.priority || "medium"
+              });
+            });
+          }
+        }
+      } catch (e) {
+        console.error("Không thể đọc LocalStorage:", e);
+      }
+
+      tasksRef.once("value")
+        .then(snapshot => {
+          const data = snapshot.val();
+          if (!data || !Array.isArray(data)) {
+            renderTasks();
+            return;
+          }
+
+          tasks.length = 0;
+          data.forEach(t => {
+            if (!t) return;
             tasks.push({
               id: t.id || Date.now() + Math.random(),
               title: t.title || "",
@@ -1176,56 +1298,96 @@
               priority: t.priority || "medium"
             });
           });
-        }
-      } catch (e) {
-        console.error("Không thể đọc LocalStorage:", e);
-      }
-    }
 
-    function saveFrequent() {
-      try {
-        const names = frequentItems.map(item => item.name);
-        localStorage.setItem(STORAGE_FREQUENT_KEY, JSON.stringify(names));
-      } catch (e) {
-        console.error("Không thể lưu đề mục thường dùng:", e);
-      }
+          renderTasks();
+          saveTasks();
+        })
+        .catch(err => {
+          console.error("Không thể load Firebase tasks:", err);
+          renderTasks();
+        });
     }
 
     function loadFrequent() {
       try {
         const raw = localStorage.getItem(STORAGE_FREQUENT_KEY);
-        if (!raw) return;
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) {
-          parsed.forEach((name, idx) => {
-            frequentItems.push({ id: Date.now() + idx, name: String(name) });
-          });
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            parsed.forEach((name, idx) => {
+              frequentItems.push({ id: Date.now() + idx, name: String(name) });
+            });
+          }
         }
       } catch (e) {
         console.error("Không thể đọc đề mục thường dùng:", e);
       }
-    }
 
-    function saveSubjects() {
-      try {
-        localStorage.setItem(STORAGE_SUBJECTS_KEY, JSON.stringify(subjectStore));
-      } catch (e) {
-        console.error("Không thể lưu thư viện môn học:", e);
-      }
+      frequentRef.once("value")
+        .then(snapshot => {
+          const data = snapshot.val();
+          if (!data || !Array.isArray(data)) {
+            renderFrequent();
+            return;
+          }
+
+          frequentItems.length = 0;
+          data.forEach((name, idx) => {
+            if (!name) return;
+            frequentItems.push({ id: Date.now() + idx, name: String(name) });
+          });
+
+          renderFrequent();
+          saveFrequent();
+          syncSubjectsWithFrequent();
+        })
+        .catch(err => {
+          console.error("Không thể load Firebase frequent:", err);
+          renderFrequent();
+        });
     }
 
     function loadSubjects() {
       try {
         const raw = localStorage.getItem(STORAGE_SUBJECTS_KEY);
-        if (!raw) {
-          subjectStore = {};
-          return;
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === "object") {
+            subjectStore = {};
+            Object.keys(parsed).forEach(name => {
+              const value = parsed[name];
+              if (!value || typeof value !== "object") return;
+              const lessons = Array.isArray(value.lessons) ? value.lessons : [];
+              subjectStore[name] = {
+                lessons: lessons.map(lesson => ({
+                  id: lesson.id || Date.now() + Math.random(),
+                  title: lesson.title || "",
+                  chapter: lesson.chapter || "",
+                  link: lesson.link || "",
+                  attachments: Array.isArray(lesson.attachments) ? lesson.attachments : []
+                }))
+              };
+            });
+          } else {
+            subjectStore = {};
+          }
         }
-        const parsed = JSON.parse(raw);
-        if (parsed && typeof parsed === "object") {
+      } catch (e) {
+        console.error("Không thể đọc thư viện môn học:", e);
+        subjectStore = {};
+      }
+
+      subjectsRef.once("value")
+        .then(snapshot => {
+          const data = snapshot.val();
+          if (!data || typeof data !== "object") {
+            renderSubjectSelect();
+            return;
+          }
+
           subjectStore = {};
-          Object.keys(parsed).forEach(name => {
-            const value = parsed[name];
+          Object.keys(data).forEach(name => {
+            const value = data[name];
             if (!value || typeof value !== "object") return;
             const lessons = Array.isArray(value.lessons) ? value.lessons : [];
             subjectStore[name] = {
@@ -1238,44 +1400,34 @@
               }))
             };
           });
-        } else {
-          subjectStore = {};
-        }
-      } catch (e) {
-        console.error("Không thể đọc thư viện môn học:", e);
-        subjectStore = {};
-      }
+
+          saveSubjects();
+          renderSubjectSelect();
+        })
+        .catch(err => {
+          console.error("Không thể load Firebase subjects:", err);
+          renderSubjectSelect();
+        });
     }
 
-    // Đồng bộ danh sách môn học với Đề mục thường dùng
-    function syncSubjectsWithFrequent() {
-      frequentItems.forEach(item => {
-        if (!subjectStore[item.name]) {
-          subjectStore[item.name] = { lessons: [] };
-        }
-      });
-      saveSubjects();
-      renderSubjectSelect();
-    }
-
-    // ====== Theme functions ======
+    // ===== Theme =====
     function applyTheme(theme) {
       currentTheme = theme === "ctump" ? "ctump" : "space";
+      document.body.classList.remove("theme-ctump");
 
       if (currentTheme === "ctump") {
-        heroBgEl.src = "ctump-bg.jpg"; // ảnh trường CTUMP
+        document.body.classList.add("theme-ctump");
+        heroBgEl.src = "ctump-bg.jpg";
         heroPillEl.textContent = "🏫 Planner CTUMP · Lịch học & ôn thi";
         heroSubtitleEl.textContent =
           "Tập trung vào lịch học, lịch thi và kế hoạch ôn tập theo tuần/tháng tại CTUMP, gắn với thời khóa biểu trường.";
         toggleThemeBtn.textContent = "Giao diện: CTUMP";
-        document.body.classList.add("theme-ctump");
       } else {
         heroBgEl.src = "space-bg.jpg";
         heroPillEl.textContent = "🚀 Planner không gian · Quản lý thời gian như phi hành gia";
         heroSubtitleEl.textContent =
           "Lập kế hoạch ngày / tuần / tháng / năm, lưu tự động, gợi ý khung giờ, và chỉ một cú click để chèn môn học hay đề mục lặp lại.";
         toggleThemeBtn.textContent = "Giao diện: Space";
-        document.body.classList.remove("theme-ctump");
       }
     }
 
@@ -1292,9 +1444,7 @@
       try {
         const raw = localStorage.getItem(THEME_KEY);
         if (raw === "ctump" || raw === "space") saved = raw;
-      } catch (e) {
-        console.error("Không thể đọc theme:", e);
-      }
+      } catch {}
       applyTheme(saved);
     }
 
@@ -1306,7 +1456,7 @@
       });
     }
 
-    // Hiển thị/ẩn ngày & giờ tùy theo mức kế hoạch
+    // ===== Logic nhập kế hoạch =====
     taskLevelEl.addEventListener("change", () => {
       const level = taskLevelEl.value;
       if (level === "day") {
@@ -1328,7 +1478,6 @@
       }
     });
 
-    // Thêm kế hoạch
     addTaskBtn.addEventListener("click", () => {
       const title = taskTitleEl.value.trim();
       const note = taskNoteEl.value.trim();
@@ -1422,13 +1571,14 @@
         case "low":
           return "Gợi ý: làm buổi tối (19:00–21:00) cho việc nhẹ nhàng / mang tính thói quen.";
         default:
-          return "Gợi ý: làm buổi chiều (13:30–16:30) khi cần trao đổi, họp hoặc xử lý việc mức vừa.";
+          return "Gợi ý: làm buổi chiều (13:30–16:30) khi cần trao đổi hoặc xử lý việc mức vừa.";
       }
     }
 
     function renderTasks() {
       if (tasks.length === 0) {
-        taskListEl.innerHTML = '<p style="font-size:13px; color:#6b7280;">Chưa có kế hoạch nào. Hãy thêm một vài việc cần làm nhé!</p>';
+        taskListEl.innerHTML =
+          '<p style="font-size:13px; color:#6b7280;">Chưa có kế hoạch nào. Hãy thêm vài việc cần làm nhé!</p>';
         return;
       }
 
@@ -1446,7 +1596,6 @@
       });
 
       taskListEl.innerHTML = "";
-
       sorted.forEach(task => {
         const item = document.createElement("div");
         item.className = "task-item";
@@ -1549,7 +1698,7 @@
       if (!dateStr) return "";
       const [y, m, d] = dateStr.split("-");
       const dt = new Date(Number(y), Number(m) - 1, Number(d));
-      const idx = dt.getDay(); // 0 CN
+      const idx = dt.getDay();
       const map = ["Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];
       return map[idx] || "";
     }
@@ -1572,7 +1721,8 @@
 
     function renderFrequent() {
       if (frequentItems.length === 0) {
-        frequentListEl.innerHTML = '<span style="font-size:12px; color:#6b7280;">Chưa có đề mục nào. Hãy thêm vài môn học / hoạt động bạn hay dùng.</span>';
+        frequentListEl.innerHTML =
+          '<span style="font-size:12px; color:#6b7280;">Chưa có đề mục nào. Hãy thêm vài môn học / hoạt động.</span>';
         return;
       }
       frequentListEl.innerHTML = "";
@@ -1614,7 +1764,17 @@
       });
     }
 
-    // ===== Thư viện môn học & bài học =====
+    // ===== Thư viện môn học =====
+    function syncSubjectsWithFrequent() {
+      frequentItems.forEach(item => {
+        if (!subjectStore[item.name]) {
+          subjectStore[item.name] = { lessons: [] };
+        }
+      });
+      saveSubjects();
+      renderSubjectSelect();
+    }
+
     function renderSubjectSelect() {
       subjectSelectEl.innerHTML = "";
       if (frequentItems.length === 0) {
@@ -1624,7 +1784,7 @@
         opt.textContent = 'Chưa có môn học (thêm ở "Đề mục thường dùng")';
         subjectSelectEl.appendChild(opt);
         lessonListEl.innerHTML =
-          '<p style="font-size:12px; color:#6b7280;">Chưa có môn học để hiển thị. Hãy thêm môn ở phần "Đề mục thường dùng".</p>';
+          '<p style="font-size:12px; color:#6b7280;">Chưa có môn học để hiển thị.</p>';
         return;
       }
       subjectSelectEl.disabled = false;
@@ -1642,13 +1802,8 @@
       renderLessonsForSelectedSubject();
     }
 
-    subjectSelectEl.addEventListener("change", () => {
-      renderLessonsForSelectedSubject();
-    });
-
-    lessonSearchEl.addEventListener("input", () => {
-      renderLessonsForSelectedSubject();
-    });
+    subjectSelectEl.addEventListener("change", renderLessonsForSelectedSubject);
+    lessonSearchEl.addEventListener("input", renderLessonsForSelectedSubject);
 
     function renderLessonsForSelectedSubject() {
       const subjectName = subjectSelectEl.value;
@@ -1674,7 +1829,7 @@
 
       if (filtered.length === 0) {
         const msg = lessons.length === 0
-          ? "Chưa có bài học nào cho môn này. Thêm bài học mới bên trên."
+          ? "Chưa có bài học nào cho môn này."
           : "Không tìm thấy bài học nào khớp với từ khóa.";
         lessonListEl.innerHTML =
           `<p style="font-size:12px; color:#6b7280;">${msg}</p>`;
@@ -1758,7 +1913,7 @@
     addLessonBtn.addEventListener("click", () => {
       const subjectName = subjectSelectEl.value;
       if (!subjectName) {
-        alert('Chưa có môn học. Hãy thêm môn ở "Đề mục thường dùng" trước.');
+        alert('Chưa có môn học. Thêm môn ở "Đề mục thường dùng" trước.');
         return;
       }
 
@@ -1811,25 +1966,19 @@
             dataUrl: e.target.result
           });
           remaining--;
-          if (remaining === 0) {
-            finalizeSave();
-          }
+          if (remaining === 0) finalizeSave();
         };
         reader.onerror = () => {
           console.error("Lỗi khi đọc file:", file.name);
           remaining--;
-          if (remaining === 0) {
-            finalizeSave();
-          }
+          if (remaining === 0) finalizeSave();
         };
         reader.readAsDataURL(file);
       });
     });
 
-    // ====== Tạo thời khóa biểu tuần ======
-    generateScheduleBtn.addEventListener("click", () => {
-      generateSmartWeekSchedule();
-    });
+    // ===== Thời khóa biểu tuần =====
+    generateScheduleBtn.addEventListener("click", generateSmartWeekSchedule);
 
     function generateSmartWeekSchedule() {
       const weeklyTasks = tasks.filter(t => t.level === "week");
@@ -1890,7 +2039,6 @@
       html += "</tr></tbody>";
 
       scheduleTableEl.innerHTML = html;
-
       generateTimeManagementTips(schedule, days);
     }
 
@@ -1908,7 +2056,7 @@
       });
       if (overloadedDays.length > 0) {
         tips.push(
-          `🔴 ${overloadedDays.join(", ")} có khá nhiều việc. Hãy chọn 1–2 việc quan trọng nhất (MIT) làm trước, phần còn lại dời sang ngày ít việc hơn.`
+          `🔴 ${overloadedDays.join(", ")} khá nhiều việc. Hãy chọn 1–2 việc quan trọng nhất (MIT), phần còn lại dời sang ngày khác.`
         );
       }
 
@@ -1920,18 +2068,18 @@
       });
       if (lightDays.length > 0) {
         tips.push(
-          `🟢 ${lightDays.join(", ")} đang trống. Dùng để làm việc sâu (deep work), lên kế hoạch dài hạn hoặc nghỉ ngơi phục hồi năng lượng.`
+          `🟢 ${lightDays.join(", ")} đang trống. Dùng để làm việc sâu (deep work) hoặc nghỉ ngơi phục hồi.`
         );
       }
 
       if (maxTasks - minTasks >= 3) {
         tips.push(
-          "⚖️ Khối lượng công việc giữa các ngày hơi lệch. Thử dời bớt việc từ ngày bận sang ngày rảnh để đều hơn, tránh bị quá tải."
+          "⚖️ Khối lượng công việc giữa các ngày hơi lệch. Thử chuyển bớt việc từ ngày bận sang ngày rảnh để đều hơn."
         );
       }
 
       tips.push(
-        "⏱️ Mỗi buổi chỉ nên có 1–3 việc quan trọng nhất. Còn lại dành cho việc nhỏ, email, nhắn tin và nghỉ ngắn."
+        "⏱️ Mỗi buổi chỉ nên có 1–3 việc quan trọng. Còn lại dành cho việc nhỏ, email, nhắn tin và nghỉ ngắn."
       );
 
       tipsListEl.innerHTML = "";
@@ -1944,27 +2092,15 @@
       tipsBoxEl.style.display = "block";
     }
 
-    // ====== Xuất PDF & Excel ======
+    // ===== Xuất PDF & Excel =====
     exportPdfBtn.addEventListener("click", () => {
       if (!scheduleTableEl.innerHTML.trim()) {
         alert("Vui lòng tạo thời khóa biểu tuần trước khi xuất PDF.");
         return;
       }
-      exportScheduleAsPDF();
-    });
-
-    exportExcelBtn.addEventListener("click", () => {
-      if (!scheduleTableEl.innerHTML.trim()) {
-        alert("Vui lòng tạo thời khóa biểu tuần trước khi xuất Excel.");
-        return;
-      }
-      exportScheduleAsExcel();
-    });
-
-    function exportScheduleAsPDF() {
       const printWindow = window.open("", "_blank");
       if (!printWindow) {
-        alert("Trình duyệt chặn cửa sổ mới. Hãy cho phép popup để xuất PDF.");
+        alert("Trình duyệt chặn cửa sổ mới. Hãy cho phép popup.");
         return;
       }
       printWindow.document.write(`
@@ -1993,9 +2129,13 @@
       printWindow.document.close();
       printWindow.focus();
       printWindow.print();
-    }
+    });
 
-    function exportScheduleAsExcel() {
+    exportExcelBtn.addEventListener("click", () => {
+      if (!scheduleTableEl.innerHTML.trim()) {
+        alert("Vui lòng tạo thời khóa biểu tuần trước khi xuất Excel.");
+        return;
+      }
       const html =
         `<html><head><meta charset="UTF-8" /></head><body><table>` +
         scheduleTableEl.innerHTML +
@@ -2010,9 +2150,9 @@
       a.click();
       document.body.removeChild(a);
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-    }
+    });
 
-    // ====== LỊCH TƯƠNG TÁC ======
+    // ===== Lịch tương tác =====
     function initCalendar() {
       const today = new Date();
       currentMonth = today.getMonth();
@@ -2034,8 +2174,8 @@
       calendarGridEl.innerHTML = "";
 
       const firstDay = new Date(year, month, 1);
-      let startDay = firstDay.getDay(); // 0(CN)–6(T7)
-      startDay = (startDay + 6) % 7; // đổi sang hệ T2–CN
+      let startDay = firstDay.getDay();
+      startDay = (startDay + 6) % 7;
 
       const daysInMonth = new Date(year, month + 1, 0).getDate();
       const daysInPrevMonth = new Date(year, month, 0).getDate();
@@ -2079,7 +2219,6 @@
         const mm = String(cellMonth + 1).padStart(2, "0");
         const dd = String(dateNumber).padStart(2, "0");
         const dateStr = `${cellYear}-${mm}-${dd}`;
-
         cell.dataset.date = dateStr;
 
         if (isCurrentMonth && inCurrentMonth && dateNumber === today.getDate()) {
@@ -2120,7 +2259,6 @@
       renderCalendar(currentMonth, currentYear);
     });
 
-    // Bộ lọc dưới lịch
     filterLevelEl.addEventListener("change", () => {
       if (selectedDateStr) showTasksForDate(selectedDateStr);
     });
@@ -2174,7 +2312,7 @@
         if (timeRange) parts.push("Giờ: " + timeRange);
         parts.push("Mức: " + humanPriorityText(task.priority));
         parts.push("Loại: " + (
-          task.level === "day" ? "Kế hoạch trong ngày" :
+          task.level === "day" ? "Trong ngày" :
           task.level === "week" ? "Trong tuần" :
           task.level === "month" ? "Trong tháng" : "Trong năm"
         ));
@@ -2194,7 +2332,7 @@
       });
     }
 
-    // ====== Khởi tạo ======
+    // ===== Khởi tạo =====
     loadTasks();
     loadFrequent();
     loadSubjects();
